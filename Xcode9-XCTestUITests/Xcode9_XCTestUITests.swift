@@ -29,10 +29,11 @@ class Xcode9_XCTestUITests: XCTestCase {
         return result
     }
     
+  /*
     func testXCUISiriService() {
-        XCUIDevice().siriService.activate(voiceRecognitionText: "Open News")
+       // XCUIDevice().siriService.activate(voiceRecognitionText: "Open News")
     }
-    
+    */
     func testXCWaiterfeatures() {
         XCUIApplication().launch()
         let whatsNewButton = XCUIApplication().buttons["New"]
@@ -40,6 +41,7 @@ class Xcode9_XCTestUITests: XCTestCase {
         XCTAssertTrue(waiterResultWithExpextation(whatsNewButton) == .completed)
     }
     
+   /*
     func testMultipleApps() {
         
         let settingsApp = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
@@ -47,6 +49,7 @@ class Xcode9_XCTestUITests: XCTestCase {
         settingsApp.terminate()
         print(settingsApp.state.rawValue)
     }
+ */
     
     func testActivitiesScreenShotsAttachments() {
         XCTContext.runActivity(named: "Given I launch an Xcode9-XCTest app") { _ in
